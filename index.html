@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+<!--    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    <title>串口调试工具</title>
+      <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+      <div class="container">
+          <div class="header">
+              <button onclick="openS()">打开串口</button>
+              <button onclick="closeS()">关闭串口</button>
+              <button onclick="pairMode()">进入配置状态</button>
+              <button onclick="communicationMode()">进入通讯状态</button>
+              <button onclick="helpInfo()">帮助信息</button>
+              <button onclick="searchVersion()">查询版本</button>
+<!--              <button id="devTool" onclick="openDevTool()">打开控制台</button>-->
+              <div class="state-box" id="state-box">
+              </div>
+          </div>
+          <div id="content">
+          </div>
+          <div class="footer">
+              <div>
+                  <textarea name="input" id="input" cols="30" rows="10"></textarea>
+              </div>
+              <div class="t-right">
+                  <button onclick="sendS()">发送数据</button>
+              </div>
+          </div>
+      </div>
+     <script src="./renderer.js"></script>
+     <script src="./index.js"></script>
+  </body>
+</html>
